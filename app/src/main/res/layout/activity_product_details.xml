@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ProductDetails"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:background="@color/white"
+            android:id="@+id/basic_info"
+            android:paddingBottom="16dp">
+
+            <!-- Product Item -->
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/product_img"
+                android:src="@drawable/banana"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp">
+
+                <!-- Product name-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="Bananas"
+                    android:id="@+id/txt_product_name"/>
+
+                <!-- START Product code view group-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-small"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:text="@string/bar_code"
+                        android:layout_marginRight="5dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-small"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:text="2398465477892"
+                        android:id="@+id/txt_product_code"/>
+                </LinearLayout>
+                <!-- END Product code view group-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- START product price view group-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-small"
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:layout_marginRight="5dp"
+                                android:text="@string/price"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-small"
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:text="$25/kg"
+                                android:id="@+id/txt_product_price"/>
+                        </LinearLayout>
+                        <!-- END Product price view group-->
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/basic_info"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:id="@+id/quantity_block"
+            android:background="@color/white">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp">
+
+                <!-- Quantity section header-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text="@string/quantity" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <!-- Minus button -->
+                    <android.support.v7.widget.AppCompatButton
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/btn_decrement_quantity"
+                        android:theme="@style/AppTheme.RaisedButtonAccent"
+                        android:text="-"
+                        android:textSize="15sp"/>
+
+                    <!-- START quantity view group -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-small"
+                        android:layout_gravity="center_vertical"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:text="6"
+                        android:id="@+id/txt_product_quantity"
+                       />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-small"
+                            android:layout_gravity="center_vertical"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:text="piece"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/txt_product_unit"
+                            />
+                    </LinearLayout>
+                    <!-- END quantity view group -->
+
+                    <!-- Plus button -->
+                    <android.support.v7.widget.AppCompatButton
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/btn_increment_quantity"
+                        android:theme="@style/AppTheme.RaisedButtonAccent"
+                        android:text="+"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/quantity_block"
+            android:layout_centerHorizontal="true">
+            <!-- Delete Product Button -->
+            <android.support.v7.widget.AppCompatButton
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:id="@+id/btn_contact_supplier_product"
+                android:theme="@style/AppTheme.RaisedButtonPrimary"
+                android:text="@string/contact_supplier_btn_txt"
+                android:textAllCaps="false"
+                android:textSize="15sp"/>
+            <!-- Delete Product Button -->
+            <android.support.v7.widget.AppCompatButton
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:id="@+id/btn_delete_product"
+                android:textAllCaps="false"
+                android:theme="@style/AppTheme.RaisedButtonRed"
+                android:text="@string/delete_btn_txt"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    </RelativeLayout>

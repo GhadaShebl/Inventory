@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Inventory</string>
+
+    <!-- Product_item.xml sale button text -->
+    <string name="sale">Sale</string>
+
+    <!-- activity_products.xml empty view text-->
+    <string name="start_adding_products">Get started by adding some products</string>
+
+    <!-- Product_item.xml in stock prompt -->
+    <string name="in_stock">in stock</string>
+
+    <!-- Product_item.xml bar code prompt -->
+    <string name="bar_code">Bar Code:</string>
+
+    <!-- Product_item.xml price prompt -->
+    <string name="price">Price:</string>
+
+    <!-- home_menu.xml insert product action -->
+    <string name="action_insert_new_product">Insert Product</string>
+
+    <!-- activity_product_details.xml quantity block header -->
+    <string name="quantity">Quantity</string>
+
+    <!-- activity_product_details.xml order from supplier button text -->
+    <string name="contact_supplier_btn_txt">Order from Supplier</string>
+
+    <!-- activity_product_details.xml delete product button text -->
+    <string name="delete_btn_txt">Delete Product</string>
+
+    <!-- AddProduct activity label -->
+    <string name="add_product">Add Product</string>
+
+    <!-- activity_add_product.xml Add product photo here placeholder text -->
+    <string name="add_product_photo">Add Product Photo Here</string>
+
+    <!-- activity_add_product.xml product code edit text hint -->
+    <string name="product_code">Code (10 digits)</string>
+
+    <!-- activity_add_product.xml product name edit text hint -->
+    <string name="product_name">Name</string>
+
+    <!-- activity_add_product.xml product quantity edit text hint -->
+    <string name="product_quantity">Quantity</string>
+
+    <!-- activity_add_product.xml product unit edit text hint -->
+    <string name="product_unit">Unit</string>
+
+    <!-- activity_add_product.xml product unit edit text hint -->
+    <string name="product_price">Price</string>
+
+    <!-- activity_add_product.xml change product image button -->
+    <string name="change_img">Upload different Photo </string>
+
+
+</resources>

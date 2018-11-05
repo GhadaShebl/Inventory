@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AddProduct">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <!-- START img upload block (before any img is uploaded -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_margin="20dp"
+        android:id="@+id/img_upload_block"
+        android:background="@drawable/dashed_border_blue">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/placeholder"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/dashed_border"
+                android:text="@string/add_product_photo"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- END img upload block -->
+
+    <!-- START img already uploaded block -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:visibility="gone"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:id="@+id/img_uploaded_block"
+        android:background="@drawable/dashed_border_white">
+
+        <!-- Product Image -->
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/product_img"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/banana"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/change_img"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/change_photo_btn"
+            />
+
+    </LinearLayout>
+    <!-- END img already uploaded block -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <!-- START product code block-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_background">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/product_code"
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="16dp"
+                android:id="@+id/product_code_edit_text"
+                android:fontFamily="sans-serif-small"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:background="@android:color/transparent"/>
+        </RelativeLayout>
+
+        </LinearLayout>
+        <!-- END product code block-->
+
+        <!-- START product name block-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_background">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/product_name"
+                android:padding="16dp"
+                android:id="@+id/product_name_edit_text"
+                android:fontFamily="sans-serif-small"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:background="@android:color/transparent"/>
+        </RelativeLayout>
+        <!-- END product name block -->
+
+        <!-- START product quantity and unit block -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_background">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/product_quantity"
+                android:padding="16dp"
+                android:inputType="number"
+                android:id="@+id/product_quantity_edit_text"
+                android:fontFamily="sans-serif-small"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:background="@android:color/transparent"/>
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_text_background">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/product_unit"
+                    android:padding="16dp"
+                    android:id="@+id/product_unit_edit_text"
+                    android:fontFamily="sans-serif-small"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:background="@android:color/transparent"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <!-- END product quantity and unit block -->
+
+        <!-- START product price block -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_background">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/product_price"
+                android:padding="16dp"
+                android:inputType="number"
+                android:id="@+id/product_price_edit_text"
+                android:fontFamily="sans-serif-small"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:background="@android:color/transparent"/>
+        </RelativeLayout>
+        <!-- END product price block -->
+
+        <!-- Add Product Button -->
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/btn_add_product"
+            android:theme="@style/AppTheme.RaisedButtonAccent"
+            android:text="@string/add_product"
+            android:alpha="0.6"
+            android:enabled="false"
+            android:textAllCaps="false"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
